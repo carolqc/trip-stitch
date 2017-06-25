@@ -1,13 +1,15 @@
-Template.main_content.events( {
-    'submit form': function(event){
+import {Template} from 'meteor/templating'
+
+Template.main_content.events({
+    'submit form[name=create-trip]': function (event) {
         event.preventDefault()
-        // console.log(event.type)
-        // console.log("Form submitted")
-        var destination = event.target.destination.value;
-        var datepicker_start = event.target.datepicker_start.value;
-        var datepicker_end = event.target.datepicker_end.value;
-        var organizer_name = event.target.organizer_name.value;
-        console.log(destination);
-        Meteor.call('create-a-trip');
+
+        Meteor.call('create-a-trip', {
+            destination_airport_code: event.target.destination.value,
+            start_date: event.target.datepicker_start.value,
+            end_date: event.target.datepicker_end.value,
+            organizer_name: event.target.organizer_name.value,
+            organizer_email: event.target.organizer_email.value
+        });
     }
 })

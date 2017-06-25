@@ -1,5 +1,7 @@
+import {Trips} from '../collections'
+
 Meteor.methods({
-    'create-a-trip': function(){
-        console.log("Hello create a trip");
+    'create-a-trip'(data) {
+        Trips.insert(data)
     }
 });
