@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trip Stitch</title>
 
-    <link rel="stylesheet" href="/css/jqm-demos.css"/>
+    <link rel="stylesheet" href="/css/jqm-demos.css" />
     <!-- jQuery CDN Content 25 April 2016 -->
     <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
     <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
@@ -35,7 +35,6 @@
         /* Swipe works with mouse as well but often causes text selection. */
         /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
         /*https://stackoverflow.com/questions/18612651/how-to-use-responsive-background-image-in-css3-in-bootstrap*/
-
         /*html {
             background: url(images/cityview.jpg) no-repeat center center fixed;
             -webkit-background-size: cover;
@@ -43,13 +42,19 @@
             -o-background-size: cover;
             background-size: cover;
         }*/
+        /*override button color to match header background*/
 
-        #bg_aboutus, #bg_homepage, #bg_manage_trip {
+        .btn-primary {
+            color: #fff;
+            background-color: #2D306E;
+            border-color: #2e6da4;
+        }
+
+        .bg_image {
 
             /* Preserve aspect ratio */
             /*min-width: 100%;*/
             /*min-height: 100%;*/
-
             /* Set rules to fill background */
             min-height: 100%;
             min-width: 1024px;
@@ -76,10 +81,9 @@
             font-size: 20px;
             font-weight: bold;
         }
-
         /*https://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3*/
 
-        .navbar-custom .navbar-nav > li > a {
+        .navbar-custom .navbar-nav>li>a {
             color: #fff;
             /*font-size: 24px;*/
         }
@@ -88,16 +92,16 @@
             font-size: 36px;
         }
 
-        .navbar-custom .navbar-nav > .active > a {
+        .navbar-custom .navbar-nav>.active>a {
             color: #ffffff;
             background-color: transparent;
         }
 
-        .navbar-custom .navbar-nav > li > a:hover,
-        .navbar-custom .navbar-nav > li > a:focus,
-        .navbar-custom .navbar-nav > .active > a:hover,
-        .navbar-custom .navbar-nav > .active > a:focus,
-        .navbar-custom .navbar-nav > .open > a {
+        .navbar-custom .navbar-nav>li>a:hover,
+        .navbar-custom .navbar-nav>li>a:focus,
+        .navbar-custom .navbar-nav>.active>a:hover,
+        .navbar-custom .navbar-nav>.active>a:focus,
+        .navbar-custom .navbar-nav>.open>a {
             text-decoration: none;
             background-color: #2D306E;
         }
@@ -113,19 +117,18 @@
         .navbar-custom .icon-bar {
             background-color: #2D306E;
         }
-
         /* for dropdowns only */
 
         .navbar-custom .navbar-nav .dropdown-menu {
             background-color: #2D306E;
         }
 
-        .navbar-custom .navbar-nav .dropdown-menu > li > a {
+        .navbar-custom .navbar-nav .dropdown-menu>li>a {
             color: #fff;
         }
 
-        .navbar-custom .navbar-nav .dropdown-menu > li > a:hover,
-        .navbar-custom .navbar-nav .dropdown-menu > li > a:focus {
+        .navbar-custom .navbar-nav .dropdown-menu>li>a:hover,
+        .navbar-custom .navbar-nav .dropdown-menu>li>a:focus {
             color: #2D306E;
         }
 
@@ -139,7 +142,7 @@
 
         .ui-header .ui-title,
         .ui-footer .ui-title {
-            margin: 0 7% /* make image pretty in the header... */
+            margin: 0 7%/* make image pretty in the header... */
         }
 
         .red {
@@ -151,7 +154,6 @@
             background: #98FF98;
             color: black;
         }
-
         /*  How do you give an empty div a fixed width?
             http://stackoverflow.com/questions/4171286/how-to-make-a-div-with-no-content-have-a-width */
 

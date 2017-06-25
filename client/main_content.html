@@ -1,56 +1,7 @@
 <template name="main_content">
-    <img src="/images/cityview.jpg" id="bg_homepage" alt="">
-    <nav class="navbar navbar-custom">
-        <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header"> <!-- Hamburger Icon -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Trip Stitch</a>
-        </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <!-- http://getbootstrap.com/components/#navbar -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign In</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Trips<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">My Trips</a></li>
-            <li><a href="#">View, Print, Email Itinerary</a></li>
-            <li><a href="#">Find My Trip</a></li>
-            <!-- <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li> -->
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Frequently Asked Questions</a></li>
-            <li><a href="#">Find Your Request Number</a></li>
-            <li><a href="#">Profile / Password Help</a></li>
-            <li><a href="./about_us/">Contact Us / About Us</a></li>
-            <!-- <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li> -->
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<!--
-        <div role="main" class="ui-content jqm-content">
-            <!- - <h1>Trip Stitch:  Planning for multi-person travel.</h1>
-            <p><strong>This website / app was created to manage your trips with multiple travelers, all coming from different locations.</strong></p>
-            <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas"> - ->
-        </div> -->
-<div class="row-fluid">
+    <img src="/images/cityview.jpg" class="bg_image" alt="">
+    {{>header}}
+    <div class="row-fluid">
         <div class="panel panel-default col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1">
           <div class="panel-body">
               <h2>First Step</h2>
@@ -124,7 +75,7 @@
                         </div>
                     </div><br><br>
 
-                    <input type="button" value="AddTraveler" class="AddTravelerButton" ><br><br>
+                    <input type="button" value="AddTraveler" class="AddTravelerButton btn btn-primary"><br><br>
                     <input type="text" name="travelerName" id="travelerName" placeholder="Traveler Name">
                     <input type="text" name="travelerAirPort" id="travelerAirPort" placeholder="Traveler Departure Airport Code">
                     <input type="text" name="travelerEmail" id="travelerEmail" placeholder="Traveler Email Address">
@@ -139,7 +90,7 @@
                 </div>
 <br><br>
                 <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    <input type="submit" id="finishButton" data-enhanced="true" value="Submit">
+                    <input type="submit" id="finishButton" data-enhanced="true" value="Submit" class="btn btn-primary">
                 </div>
   </div>
 </div>
