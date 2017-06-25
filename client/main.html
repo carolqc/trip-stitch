@@ -5,21 +5,105 @@
 
     <link rel="stylesheet" href="/css/jqm-demos.css"/>
     <!-- jQuery CDN Content 25 April 2016 -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+    <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
     <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
-
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
     <style type="text/css">
         /*custom CSS*/
         /* Swipe works with mouse as well but often causes text selection. */
         /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+        /*https://stackoverflow.com/questions/18612651/how-to-use-responsive-background-image-in-css3-in-bootstrap*/
+
+        html {
+            background: url(images/cityview.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        div.panel-spacer {
+            border: 0;
+            visibility: hidden;
+        }
+
+        .navbar-custom {
+            background-color: #2D306E;
+            color: #ffffff;
+            border-radius: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /*https://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3*/
+
+        .navbar-custom .navbar-nav > li > a {
+            color: #fff;
+            /*font-size: 24px;*/
+        }
+
+        .navbar-custom a.navbar-brand {
+            font-size: 36px;
+        }
+
+        .navbar-custom .navbar-nav > .active > a {
+            color: #ffffff;
+            background-color: transparent;
+        }
+
+        .navbar-custom .navbar-nav > li > a:hover,
+        .navbar-custom .navbar-nav > li > a:focus,
+        .navbar-custom .navbar-nav > .active > a:hover,
+        .navbar-custom .navbar-nav > .active > a:focus,
+        .navbar-custom .navbar-nav > .open > a {
+            text-decoration: none;
+            background-color: #2D306E;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: #eeeeee;
+        }
+
+        .navbar-custom .navbar-toggle {
+            background-color: #eeeeee;
+        }
+
+        .navbar-custom .icon-bar {
+            background-color: #2D306E;
+        }
+
+        /* for dropdowns only */
+
+        .navbar-custom .navbar-nav .dropdown-menu {
+            background-color: #2D306E;
+        }
+
+        .navbar-custom .navbar-nav .dropdown-menu > li > a {
+            color: #fff;
+        }
+
+        .navbar-custom .navbar-nav .dropdown-menu > li > a:hover,
+        .navbar-custom .navbar-nav .dropdown-menu > li > a:focus {
+            color: #2D306E;
+        }
 
         .ui-content:not(INPUT):not(TEXTAREA) {
             -webkit-user-select: none;
@@ -141,8 +225,6 @@
             padding: 0;
             margin: 0;
         }
-
-        }
     </style>
 
     <style>
@@ -181,8 +263,8 @@
     </style>
     <script>
         $(function () {
-            $('#datepicker_start').datepicker()
-            $('#datepicker_end').datepicker()
-        })
+            $("#datepicker_start").datepicker();
+            $("#datepicker_end").datepicker();
+        });
     </script>
 </head>

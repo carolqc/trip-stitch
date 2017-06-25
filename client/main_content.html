@@ -1,72 +1,139 @@
 <template name="main_content">
-    <div data-role="page" id="intro" class="jqm-demos jqm-home ui-page-theme-a ui-page-footer-fixed " data-url="intro"
-         tabindex="0" style="padding-bottom: 62px">  <!-- ui-page ui-page-theme-a ui-page-footer-fixed">  -->
-        <div data-role="header" class="jqm-header">
-            <h2><a href="./" title="Trip-Stitch" class="ui-link">
-                <div style=" font-size: 2vh; color: white; background: dodgerblue; padding: 2px 10px; ">
-                    Trip-Stitch <br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    &nbsp;
-                </div>
-            </a>
-            </h2>
-            <a href="#"
-               class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+    <nav class="navbar navbar-custom">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header"> <!-- Hamburger Icon -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Trip Stitch</a>
         </div>
-        <!-- /header -->
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- http://getbootstrap.com/components/#navbar -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign In</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Trips<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">My Trips</a></li>
+            <li><a href="#">View, Print, Email Itinerary</a></li>
+            <li><a href="#">Find My Trip</a></li>
+            <!-- <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li> -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Find Your Request Number</a></li>
+            <li><a href="#">Profile / Password Help</a></li>
+            <li><a href="#">Contact Us / About Us</a></li>
+            <!-- <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!--
         <div role="main" class="ui-content jqm-content">
-
-            <h1>Trip Stitch: Planning for multi-person travel.</h1>
-
-            <p><strong>This website / app was created to manage your trips with multiple travelers, all coming from
-                different locations.</strong></p>
-            <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas">
-
-            <h2>First Step</h2>
-            <form name="create-trip">
-                <!-- <input type="button" data-inline="true" value="Input"> -->
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    Round Trip
-                    <input type="button" data-enhanced="true" value="Round Trip">
-                </div>
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    One Way
-                    <input type="button" data-enhanced="true" value="One Way">
-                </div>
-
-                <p>Pick Your Destination:
-                    <input type="text" name="destination"></p>
-                Choose Your dates
-                <p>Depart: <input type="text" id="datepicker_start"></p>
-                <p>Return: <input type="text" id="datepicker_end"></p>
-
-                <p>Organizer Name:
-                    <input type="text" name="organizer_name"></p>
-                <p>Organizer Email Address:
-                    <input type="text" name="organizer_email"></p>
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    Submit
-                    <input type="submit" data-enhanced="true" value="Round Trip">
-                </div>
-            </form>
-        </div>
-        <!-- end of main -->
-        <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
-            <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-                <li data-filtertext="home create a trip" data-icon="home"><a href="#intro" data-ajax="false">Home /
-                    Create A Trip</a></li>
-                <!-- <li data-filtertext="invitee responses"><a href="#share_ideas_chat">Invitee Page</a></li> -->
-                <li data-filtertext="trip search results"><a href="#portfolio">Trip Search Results</a></li>
-                <li data-filtertext="book your trip"><a href="#submit_a_trade" data-ajax="false">Book It!</a></li>
-            </ul>
-        </div>
-        <!-- /panel -->
-        <!-- <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="ui-bar-a jqm-footer ui-footer ui-bar-inherit ui-footer-fixed slideup" role="contentinfo">
-            <p>Trip Stitch: Coordinate your group travel plans.</p>
+            <!- - <h1>Trip Stitch:  Planning for multi-person travel.</h1>
+            <p><strong>This website / app was created to manage your trips with multiple travelers, all coming from different locations.</strong></p>
+            <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas"> - ->
         </div> -->
-        <!-- /footer -->
-    </div>
-    <!-- /page -->
-    <!-- <script src="/js/jqm-demos.js"></script> -->
+
+        <div class="panel panel-default col-sm-1 panel-spacer"></div>
+
+        <div class="panel panel-default col-sm-4">
+          <div class="panel-body">
+              <h2>First Step</h2>
+              <form class="form-horizontal" >
+                  <!-- <input type="button" data-inline="true" value="Input"> -->
+                <p><div class="form-group">
+                    <label class="col-sm-1"></label>
+                    <label class="radio-inline"><input type="radio" name="trip" value="RoundTrip">Round Trip</label>
+                    <label class="radio-inline"><input type="radio" name="trip" value="OneWay">One Way</label>
+                </div></p>
+                <p></p>
+                <p>
+                    <div class="panel panel-default col-sm-2 panel-spacer"></div>
+                    <iframe src="http://www.webflyer.com/travel/milemarker/lookup.shtml"></iframe>
+                </p>
+                <p></p>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="destination">Destination:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="destination" placeholder="Airport Code">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="datepicker_start">Depart Date:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="datepicker_start" placeholder="Depart Date:">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="datepicker_end">Return Date:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="datepicker_end" placeholder="Return Date:">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="organizer_name">Name:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="organizer_name" placeholder="Trip Coordinator Name">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="email">Email:</label>
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control" id="organizer_email" placeholder="Enter Coordinator Email Address">
+                      </div>
+                  </div>
+
+                  <!-- <p>Organizer Email Address:
+                  <input type="text" name="organizer_email"></p> -->
+                  <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                      <input type="submit" data-enhanced="true" value="Submit">
+                  </div>
+              </form>
+          </div>
+        </div>
+
+<div class="panel panel-default col-sm-1 panel-spacer"></div>
+
+<div class="panel panel-default col-sm-5">
+  <div class="panel-body">
+      <h2>Second Step</h2>
+                <form>
+                    <input type="text" name="travelerName" placeholder="Traveler Name">
+                    <input type="text" name="travelerAirPort" placeholder="Traveler Departure Airport Code">
+                    <input type="text" name="travelerEmail" placeholder="Traveler Email Address">
+                    <input type="text" name="travelerPhone" placeholder="Traveler Phone Number">
+                    <input type="submit" value="AddTraveler" id="AddTravelerButton" >
+                </form>
+                <!-- {{> add_traveler}} -->
+                <div id="travelers">
+                    John Smith, jsmith@email.com, 123-456-7890, LAX<br>
+                    Bill Jones, bjones256@gmail.com, 123-727-6565, DFW<br>
+                    Sue Baker, sbaker777777@a.com, 888-999-7765, IAD<br>
+                    Jackie Jacobs, jj@nailmail.com, 345-555-1254, ORD
+                </div>
+  </div>
+</div>
+
 
 </template>
