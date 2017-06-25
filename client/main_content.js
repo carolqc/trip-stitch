@@ -1,4 +1,5 @@
 import {Trips} from '../collections'
+import _ from 'lodash/fp'
 
 Template.main_content.onCreated(function () {
     this.current_trip_id = new ReactiveVar(null)
@@ -40,18 +41,35 @@ Template.main_content.events({
             console.log("trip_type:  ", trip_type, "destination: ", destination, "Start Date: ", datepicker_start);
             console.log("End Date: ", datepicker_end, "Name: ", organizer_name, "Email: ", organizer_email, "Trip Title: ", trip_title);
 
-            const trip_id = Trips.insert({
-                trip_type: trip_type.val(),
-                destination: destination.val(),
-                start_date: datepicker_start.val(),
-                end_date: datepicker_end.val(),
-                organizer_name: organizer_name.val(),
-                organizer_email: organizer_email.val(),
-                trip_title: trip_title.val(),
-                travelers: []
-            })
+            // const trip_id = Trips.insert({
+            //     trip_type: trip_type.val(),
+            //     destination: destination.val(),
+            //     start_date: datepicker_start.val(),
+            //     end_date: datepicker_end.val(),
+            //     organizer_name: organizer_name.val(),
+            //     organizer_email: organizer_email.val(),
+            //     trip_title: trip_title.val(),
+            //     travelers: []
+            // })
 
-            template.current_trip_id.set(trip_id)
+            Meteor.call('calculate-trips',
+                _.merge({departure_date: datepicker_start.val(), return_date: datepicker_end.val()}, {
+                    location_pairs: template.travelers.get().map(traveler => {
+                        return {
+                            origin: traveler.origin_airport_code,
+                            destination: destination.val()
+                        }
+                    })
+                }),
+                (error, response) => {
+                    if (error) {
+                        console.error('failed to calculate trips', error)
+                    }
+                    else {
+
+                        // template.current_trip_id.set(response.trip_id)
+                    }
+                })
 
             // Clear off the form for next entry
             trip_type.val('')
