@@ -1,192 +1,192 @@
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Trip Stitch</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trip Stitch</title>
 
-   <link rel="stylesheet" href="/css/jqm-demos.css"/>
-   <!-- jQuery CDN Content 25 April 2016 -->
-   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-   <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+    <link rel="stylesheet" href="/css/jqm-demos.css"/>
+    <!-- jQuery CDN Content 25 April 2016 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
 
-   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
 
-   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-   <style type="text/css">
-      /*custom CSS*/
-      /* Swipe works with mouse as well but often causes text selection. */
-      /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+    <style type="text/css">
+        /*custom CSS*/
+        /* Swipe works with mouse as well but often causes text selection. */
+        /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
 
-      .ui-content:not(INPUT):not(TEXTAREA) {
-         -webkit-user-select: none;
-         -moz-user-select: none;
-         -ms-user-select: none;
-         -o-user-select: none;
-         user-select: none;
-      }
+        .ui-content:not(INPUT):not(TEXTAREA) {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
 
-      .ui-header .ui-title,
-      .ui-footer .ui-title {
-         margin: 0 7% /* make image pretty in the header... */
-      }
+        .ui-header .ui-title,
+        .ui-footer .ui-title {
+            margin: 0 7% /* make image pretty in the header... */
+        }
 
-      .red {
-         background: #F75D59;
-         color: white;
-      }
+        .red {
+            background: #F75D59;
+            color: white;
+        }
 
-      .green {
-         background: #98FF98;
-         color: black;
-      }
+        .green {
+            background: #98FF98;
+            color: black;
+        }
 
-      /*  How do you give an empty div a fixed width?
-          http://stackoverflow.com/questions/4171286/how-to-make-a-div-with-no-content-have-a-width */
+        /*  How do you give an empty div a fixed width?
+            http://stackoverflow.com/questions/4171286/how-to-make-a-div-with-no-content-have-a-width */
 
-      #portfolio .port_linenum {
-         width: 40px;
-         float: left;
-      }
+        #portfolio .port_linenum {
+            width: 40px;
+            float: left;
+        }
 
-      #portfolio .port_DI {
-         width: 95px;
-         float: left;
-      }
+        #portfolio .port_DI {
+            width: 95px;
+            float: left;
+        }
 
-      #portfolio .port_Trader {
-         width: 80px;
-         float: left;
-      }
+        #portfolio .port_Trader {
+            width: 80px;
+            float: left;
+        }
 
-      #portfolio .port_Sentiment {
-         width: 100px;
-         float: left;
-      }
+        #portfolio .port_Sentiment {
+            width: 100px;
+            float: left;
+        }
 
-      #portfolio .port_US {
-         width: 95px;
-         float: left;
-      }
+        #portfolio .port_US {
+            width: 95px;
+            float: left;
+        }
 
-      #portfolio .port_NumDays {
-         width: 90px;
-         float: left;
-      }
+        #portfolio .port_NumDays {
+            width: 90px;
+            float: left;
+        }
 
-      #portfolio .port_desc {
-         width: 300px;
-         float: left;
-      }
+        #portfolio .port_desc {
+            width: 300px;
+            float: left;
+        }
 
-      #portfolio .port_EP {
-         width: 90px;
-         float: left;
-      }
+        #portfolio .port_EP {
+            width: 90px;
+            float: left;
+        }
 
-      #portfolio .port_CurrentPrice {
-         width: 90px;
-         float: left;
-      }
+        #portfolio .port_CurrentPrice {
+            width: 90px;
+            float: left;
+        }
 
-      #portfolio .port_exit {
-         width: 90px;
-         float: left;
-      }
+        #portfolio .port_exit {
+            width: 90px;
+            float: left;
+        }
 
-      #portfolio .port_YTDPerf {
-         width: 120px;
-         float: left;
-      }
+        #portfolio .port_YTDPerf {
+            width: 120px;
+            float: left;
+        }
 
-      #portfolio .port_ER {
-         width: 90px;
-         float: left;
-      }
+        #portfolio .port_ER {
+            width: 90px;
+            float: left;
+        }
 
-      #portfolio .clear {
-         clear: both;
-      }
+        #portfolio .clear {
+            clear: both;
+        }
 
-      #portfolio .port_container {
-         width: 1600px;
-      }
+        #portfolio .port_container {
+            width: 1600px;
+        }
 
-      #portfolio .port {
-         padding: 2px 9px;
-         margin: 8px 0;
-      }
+        #portfolio .port {
+            padding: 2px 9px;
+            margin: 8px 0;
+        }
 
-      #portfolio .title_box {
-         color: dodgerblue;
-      }
+        #portfolio .title_box {
+            color: dodgerblue;
+        }
 
-      #portfolio .outer_container {
-         height: 72vh;
-         /* was 640px  */
-         /*width: 90vw;   /* was 1000px , was 1300px */
-         overflow-x: auto;
-         overflow-y: auto;
-         /* was hidden  */
-         max-height: 72vh;
-         /* was 640px  */
-         /* per  http://stackoverflow.com/questions/1015809/how-to-get-floating-divs-inside-fixed-width-div-to-continue-horizontally   */
-      }
+        #portfolio .outer_container {
+            height: 72vh;
+            /* was 640px  */
+            /*width: 90vw;   /* was 1000px , was 1300px */
+            overflow-x: auto;
+            overflow-y: auto;
+            /* was hidden  */
+            max-height: 72vh;
+            /* was 640px  */
+            /* per  http://stackoverflow.com/questions/1015809/how-to-get-floating-divs-inside-fixed-width-div-to-continue-horizontally   */
+        }
 
-      #portfolio ul {
-         list-style-type: none;
-         padding: 0;
-         margin: 0;
-      }
+        #portfolio ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-      }
-   </style>
+        }
+    </style>
 
-   <style>
-      /*    info from:  https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/    */
+    <style>
+        /*    info from:  https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/    */
 
-      .video-container {
-         position: relative;
-         padding-bottom: 56.25%;
-         padding-top: 35px;
-         height: 0;
-         overflow: hidden;
-      }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 35px;
+            height: 0;
+            overflow: hidden;
+        }
 
-      .video-container iframe {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-      }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-      .calendar-container {
-         position: relative;
-         padding-bottom: 55%;
-         height: 0;
-         overflow: hidden;
-      }
+        .calendar-container {
+            position: relative;
+            padding-bottom: 55%;
+            height: 0;
+            overflow: hidden;
+        }
 
-      .calendar-container iframe {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-      }
-   </style>
-   <script>
-      $(function() {
-         $('#datepicker_start').datepicker()
-         $('#datepicker_end').datepicker()
-      })
-   </script>
+        .calendar-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#datepicker_start').datepicker()
+            $('#datepicker_end').datepicker()
+        })
+    </script>
 </head>
 
 <body>
-    {{> main_content}}
+{{> main_content}}
 </body>
