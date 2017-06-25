@@ -1,188 +1,266 @@
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Trip Stitch</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trip Stitch</title>
 
-   <link rel="stylesheet" href="/css/jqm-demos.css"/>
-   <!-- jQuery CDN Content 25 April 2016 -->
-   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-   <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+    <link rel="stylesheet" href="/css/jqm-demos.css" />
+    <!-- jQuery CDN Content 25 April 2016 -->
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+    <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
 
-   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-   <style type="text/css">
-      /*custom CSS*/
-      /* Swipe works with mouse as well but often causes text selection. */
-      /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-      .ui-content:not(INPUT):not(TEXTAREA) {
-         -webkit-user-select: none;
-         -moz-user-select: none;
-         -ms-user-select: none;
-         -o-user-select: none;
-         user-select: none;
-      }
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-      .ui-header .ui-title,
-      .ui-footer .ui-title {
-         margin: 0 7% /* make image pretty in the header... */
-      }
+    <style type="text/css">
+    /*custom CSS*/
+        /* Swipe works with mouse as well but often causes text selection. */
+        /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+        /*https://stackoverflow.com/questions/18612651/how-to-use-responsive-background-image-in-css3-in-bootstrap*/
 
-      .red {
-         background: #F75D59;
-         color: white;
-      }
+        html {
+            background: url(images/cityview.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
 
-      .green {
-         background: #98FF98;
-         color: black;
-      }
+        div.panel-spacer{
+            border: 0;
+        }
 
-      /*  How do you give an empty div a fixed width?
-          http://stackoverflow.com/questions/4171286/how-to-make-a-div-with-no-content-have-a-width */
+        .navbar-custom {
+            background-color: #2D306E;
+            color: #ffffff;
+            border-radius: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /*https://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3*/
 
-      #portfolio .port_linenum {
-         width: 40px;
-         float: left;
-      }
+        .navbar-custom .navbar-nav>li>a {
+            color: #fff;
+            /*font-size: 24px;*/
+        }
 
-      #portfolio .port_DI {
-         width: 95px;
-         float: left;
-      }
+        .navbar-custom a.navbar-brand {
+            font-size: 36px;
+        }
 
-      #portfolio .port_Trader {
-         width: 80px;
-         float: left;
-      }
+        .navbar-custom .navbar-nav>.active>a {
+            color: #ffffff;
+            background-color: transparent;
+        }
 
-      #portfolio .port_Sentiment {
-         width: 100px;
-         float: left;
-      }
+        .navbar-custom .navbar-nav>li>a:hover,
+        .navbar-custom .navbar-nav>li>a:focus,
+        .navbar-custom .navbar-nav>.active>a:hover,
+        .navbar-custom .navbar-nav>.active>a:focus,
+        .navbar-custom .navbar-nav>.open>a {
+            text-decoration: none;
+            background-color: #2D306E;
+        }
 
-      #portfolio .port_US {
-         width: 95px;
-         float: left;
-      }
+        .navbar-custom .navbar-brand {
+            color: #eeeeee;
+        }
 
-      #portfolio .port_NumDays {
-         width: 90px;
-         float: left;
-      }
+        .navbar-custom .navbar-toggle {
+            background-color: #eeeeee;
+        }
 
-      #portfolio .port_desc {
-         width: 300px;
-         float: left;
-      }
+        .navbar-custom .icon-bar {
+            background-color: #2D306E;
+        }
+        /* for dropdowns only */
 
-      #portfolio .port_EP {
-         width: 90px;
-         float: left;
-      }
+        .navbar-custom .navbar-nav .dropdown-menu {
+            background-color: #2D306E;
+        }
 
-      #portfolio .port_CurrentPrice {
-         width: 90px;
-         float: left;
-      }
+        .navbar-custom .navbar-nav .dropdown-menu>li>a {
+            color: #fff;
+        }
 
-      #portfolio .port_exit {
-         width: 90px;
-         float: left;
-      }
+        .navbar-custom .navbar-nav .dropdown-menu>li>a:hover,
+        .navbar-custom .navbar-nav .dropdown-menu>li>a:focus {
+            color: #2D306E;
+        }
 
-      #portfolio .port_YTDPerf {
-         width: 120px;
-         float: left;
-      }
 
-      #portfolio .port_ER {
-         width: 90px;
-         float: left;
-      }
+        .ui-content:not(INPUT):not(TEXTAREA) {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
 
-      #portfolio .clear {
-         clear: both;
-      }
+        .ui-header .ui-title,
+        .ui-footer .ui-title {
+            margin: 0 7%/* make image pretty in the header... */
+        }
 
-      #portfolio .port_container {
-         width: 1600px;
-      }
+        .red {
+            background: #F75D59;
+            color: white;
+        }
 
-      #portfolio .port {
-         padding: 2px 9px;
-         margin: 8px 0;
-      }
+        .green {
+            background: #98FF98;
+            color: black;
+        }
+        /*  How do you give an empty div a fixed width?
+            http://stackoverflow.com/questions/4171286/how-to-make-a-div-with-no-content-have-a-width */
 
-      #portfolio .title_box {
-         color: dodgerblue;
-      }
+        #portfolio .port_linenum {
+            width: 40px;
+            float: left;
+        }
 
-      #portfolio .outer_container {
-         height: 72vh;
-         /* was 640px  */
-         /*width: 90vw;   /* was 1000px , was 1300px */
-         overflow-x: auto;
-         overflow-y: auto;
-         /* was hidden  */
-         max-height: 72vh;
-         /* was 640px  */
-         /* per  http://stackoverflow.com/questions/1015809/how-to-get-floating-divs-inside-fixed-width-div-to-continue-horizontally   */
-      }
+        #portfolio .port_DI {
+            width: 95px;
+            float: left;
+        }
 
-      #portfolio ul {
-         list-style-type: none;
-         padding: 0;
-         margin: 0;
-      }
+        #portfolio .port_Trader {
+            width: 80px;
+            float: left;
+        }
 
-      }
-   </style>
+        #portfolio .port_Sentiment {
+            width: 100px;
+            float: left;
+        }
 
-   <style>
-      /*    info from:  https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/    */
+        #portfolio .port_US {
+            width: 95px;
+            float: left;
+        }
 
-      .video-container {
-         position: relative;
-         padding-bottom: 56.25%;
-         padding-top: 35px;
-         height: 0;
-         overflow: hidden;
-      }
+        #portfolio .port_NumDays {
+            width: 90px;
+            float: left;
+        }
 
-      .video-container iframe {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-      }
+        #portfolio .port_desc {
+            width: 300px;
+            float: left;
+        }
 
-      .calendar-container {
-         position: relative;
-         padding-bottom: 55%;
-         height: 0;
-         overflow: hidden;
-      }
+        #portfolio .port_EP {
+            width: 90px;
+            float: left;
+        }
 
-      .calendar-container iframe {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-      }
-   </style>
-   <script>
-      $(function() {
-         $('#datepicker_start').datepicker()
-         $('#datepicker_end').datepicker()
-      })
-   </script>
+        #portfolio .port_CurrentPrice {
+            width: 90px;
+            float: left;
+        }
+
+        #portfolio .port_exit {
+            width: 90px;
+            float: left;
+        }
+
+        #portfolio .port_YTDPerf {
+            width: 120px;
+            float: left;
+        }
+
+        #portfolio .port_ER {
+            width: 90px;
+            float: left;
+        }
+
+        #portfolio .clear {
+            clear: both;
+        }
+
+        #portfolio .port_container {
+            width: 1600px;
+        }
+
+        #portfolio .port {
+            padding: 2px 9px;
+            margin: 8px 0;
+        }
+
+        #portfolio .title_box {
+            color: dodgerblue;
+        }
+
+        #portfolio .outer_container {
+            height: 72vh;
+            /* was 640px  */
+            /*width: 90vw;   /* was 1000px , was 1300px */
+            overflow-x: auto;
+            overflow-y: auto;
+            /* was hidden  */
+            max-height: 72vh;
+            /* was 640px  */
+            /* per  http://stackoverflow.com/questions/1015809/how-to-get-floating-divs-inside-fixed-width-div-to-continue-horizontally   */
+        }
+
+        #portfolio ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    </style>
+
+    <style>
+        /*    info from:  https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/    */
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 35px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .calendar-container {
+            position: relative;
+            padding-bottom: 55%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .calendar-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#datepicker_start").datepicker();
+            $("#datepicker_end").datepicker();
+        });
+    </script>
 </head>
 
 <body>
