@@ -1,0 +1,432 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adv Options & Hedging Meetup Las Vegas</title>
+
+    <!-- jQuery CDN Content 25 April 2016 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="./support/jqm-demos.css" />
+    <script src="./support/jqm-demos.js"></script>
+
+    <style type="text/css">
+    /*custom CSS*/
+        /* Swipe works with mouse as well but often causes text selection. */
+        /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+
+        .ui-content:not(INPUT):not(TEXTAREA) {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        .ui-header .ui-title,
+        .ui-footer .ui-title {
+            margin: 0 7%/* make image pretty in the header... */
+        }
+
+        .red {
+            background: #F75D59;
+            color: white;
+        }
+
+        .green {
+            background: #98FF98;
+            color: black;
+        }
+        /*  How do you give an empty div a fixed width?
+            http://stackoverflow.com/questions/4171286/how-to-make-a-div-with-no-content-have-a-width */
+
+        #portfolio .port_linenum {
+            width: 40px;
+            float: left;
+        }
+
+        #portfolio .port_DI {
+            width: 95px;
+            float: left;
+        }
+
+        #portfolio .port_Trader {
+            width: 80px;
+            float: left;
+        }
+
+        #portfolio .port_Sentiment {
+            width: 100px;
+            float: left;
+        }
+
+        #portfolio .port_US {
+            width: 95px;
+            float: left;
+        }
+
+        #portfolio .port_NumDays {
+            width: 90px;
+            float: left;
+        }
+
+        #portfolio .port_desc {
+            width: 300px;
+            float: left;
+        }
+
+        #portfolio .port_EP {
+            width: 90px;
+            float: left;
+        }
+
+        #portfolio .port_CurrentPrice {
+            width: 90px;
+            float: left;
+        }
+
+        #portfolio .port_exit {
+            width: 90px;
+            float: left;
+        }
+
+        #portfolio .port_YTDPerf {
+            width: 120px;
+            float: left;
+        }
+
+        #portfolio .port_ER {
+            width: 90px;
+            float: left;
+        }
+
+        #portfolio .clear {
+            clear: both;
+        }
+
+        #portfolio .port_container {
+            width: 1600px;
+        }
+
+        #portfolio .port {
+            padding: 2px 9px;
+            margin: 8px 0;
+        }
+
+        #portfolio .title_box {
+            color: dodgerblue;
+        }
+
+        #portfolio .outer_container {
+            height: 72vh;
+            /* was 640px  */
+            /*width: 90vw;   /* was 1000px , was 1300px */
+            overflow-x: auto;
+            overflow-y: auto;
+            /* was hidden  */
+            max-height: 72vh;
+            /* was 640px  */
+            /* per  http://stackoverflow.com/questions/1015809/how-to-get-floating-divs-inside-fixed-width-div-to-continue-horizontally   */
+        }
+
+        #portfolio ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    </style>
+
+    <style>
+        /*    info from:  https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/    */
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 35px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .calendar-container {
+            position: relative;
+            padding-bottom: 55%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .calendar-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="intro" class="jqm-demos jqm-home">
+        <div data-role="header" class="jqm-header">
+            <h2><a href="./" title="Trip-Stitch" class="ui-link">
+                    <div style=" font-size: 2vh; color: white; background: dodgerblue; padding: 2px 10px; ">
+                        Trip-Stitch <br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    </div>
+                </a>
+            </h2>
+            <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content jqm-content">
+
+            <h1>Trip Stitch:  Planning for multi-person travel.</h1>
+
+            <p><strong>This website / app was created to manage your trips with multiple travelers, all coming from different locations.
+            <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas">
+
+            <h2>Purpose of the group</h2>
+            <p>The purpose of the Advanced Options and Hedging Strategies group is to learn more about smart investment trading with a focus on using stock options. Options can provide a huge amount of flexibility to the trader to generate profit or hedge
+                against losses. This group is formed of a whole bunch of friendly people willing to share ideas, and offer constructive criticism to help you generate gains and protect against losses.</p>
+
+            <p> (Ted, does the proceeding paragraph need modification? Do we need more introductory content here?)</p>
+
+            
+        </div>
+        <!-- end of main -->
+        <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+            <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+                <li data-filtertext="demos homepage" data-icon="home"><a href="#intro" data-ajax="false">Home / Introduction</a></li>
+                <li data-filtertext="introduction overview getting started"><a href="#option_strategy" data-ajax="false">Options Strategies Overview</a></li>
+                <li data-filtertext="share ideas chat"><a href="#share_ideas_chat">Share Ideas / Chat</a></li>
+                <li data-filtertext="investment ideas portfolio"><a href="#portfolio">Las Vegas Team Investment Ideas</a></li>
+                <li data-filtertext="submit a trade"><a href="#submit_a_trade" data-ajax="false">Propose a trade!</a></li>
+                <li data-filtertext="contact us"><a href="#" data-ajax="false">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- /panel -->
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+            <p>Las Vegas Meetup -- Advanced Options and Hedging</p>
+        </div>
+        <!-- /footer -->
+
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="option_strategy" class="jqm-demos jqm-home">
+        <div data-role="header" class="jqm-header">
+            <h2><a href="./" title="Las Vegas Adv. Options home" class="ui-link">
+                            <div style=" font-size: 2vh; color: white; background: dodgerblue; padding: 2px 10px; ">
+                                Advanced Options and Hedging Strategy <br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Las Vegas &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            </div>
+                        </a>
+                    </h2>
+            <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content jqm-content">
+
+            <h2>Options Definitions and Strategies</h2>
+            <p>What is an option, and how do they work? <a href="http://www.investopedia.com/articles/active-trading/040915/guide-option-trading-strategies-beginners.asp">Here's a nice overview.</a> </p>
+
+            <p> Options are flexible. You can go long, go short. You can buy or sell options. You can choose your own expiration and strike price. Because of this flexibility, you can trade options in different combinations to take advantage of market trends.
+            </p>
+
+            <p> Reference: <a href="http://www.theoptionsguide.com/option-trading-strategies.aspx" data-ajax="false">The Options Guide.</a> </p>
+            <p> Reference: <a href="https://www.tastytrade.com/tt/learn/" data-ajax="false">Tasty Trade Key Concepts and Strategies.</a></p>
+
+            <div class="ui-grid-a ui-responsive">
+                <div class="ui-block-a">
+                    <div class="jqm-block-content">
+                        <h3>Bullish Strategies:</h3>
+                        <p><a href="http://www.theoptionsguide.com/bull-call-spread.aspx">Bull Call Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/bull-put-spread.aspx">Bull Put Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/index-long-call.aspx">Buying Index Calls</a></p>
+                        <p><a href="http://www.theoptionsguide.com/call-backspread.aspx">Call Backspread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/costless-collar.aspx">Costless Collar</a></p>
+                        <p><a href="http://www.theoptionsguide.com/covered-call-writing.aspx">Covered Calls</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/covered-call">Tasty Trade Covered Call</a></p>
+                        <p><a href="http://www.theoptionsguide.com/covered-combination.aspx">Covered Combination</a></p>
+                        <p><a href="http://www.theoptionsguide.com/covered-straddle.aspx">Covered Straddle</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/ratio-spread">Tasty Trade Front Ratio Call Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/in-the-money-covered-calls.aspx">In the Money Covered Call</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/jade-lizard">Tasty Trade Jade Lizard</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-call.aspx">Long Call</a></p>
+                        <p><a href="http://www.theoptionsguide.com/married-put.aspx">Married Put</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/poor-man-covered-call">Tasty Trade Poor Man Covered Call</a></p>
+                        <p><a href="http://www.theoptionsguide.com/protective-put.aspx">Protective Put</a></p>
+                        <p><a href="http://www.theoptionsguide.com/index-short-put.aspx">Selling Index Puts</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/naked-options">Tasty Trade Short Naked Put</a></p>
+                        <p><a href="http://www.theoptionsguide.com/stock-repair-strategy.aspx">Stock Repair Strategy</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/sunny-side-up">Tasty Trade Sunny Side Up</a></p>
+                        <p><a href="http://www.theoptionsguide.com/synthetic-long-call.aspx">Synthetic Long Call</a></p>
+                        <p><a href="http://www.theoptionsguide.com/synthetic-long-stock.aspx">Synthetic Long Stock</a></p>
+                        <p><a href="http://www.theoptionsguide.com/synthetic-long-stock-split-strikes.aspx">Synthetic Long Stock with Split Strikes</a></p>
+                        <p><a href="http://www.theoptionsguide.com/synthetic-short-put.aspx">Synthetic Short Put</a></p>
+                        <p><a href="http://www.theoptionsguide.com/the-collar-strategy.aspx">The Collar Strategy</a></p>
+                        <p><a href="http://www.theoptionsguide.com/uncovered-put-writing.aspx">Uncovered Put Write</a></p>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="jqm-block-content">
+                        <h3>Bearish Strategies:</h3>
+                        <p><a href="http://www.theoptionsguide.com/bear-call-spread.aspx">Bear Call Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/bear-put-spread.aspx">Bear Put Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/index-long-put.aspx">Buying Index Puts</a></p>
+                        <p><a href="http://www.theoptionsguide.com/covered-put-writing.aspx">Covered Put</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/ratio-spread">Tasty Trade Front Ratio Put Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/in-the-money-naked-calls.aspx">In-The-Money Naked Call</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-put.aspx">Long Put</a></p>
+                        <p><a href="http://www.theoptionsguide.com/out-of-the-money-naked-calls.aspx">Out of the Money Naked Call</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/poor-man-covered-put">Tasty Trade Poor Man Covered Put</a></p>
+                        <p><a href="http://www.theoptionsguide.com/protective-call.aspx">Protective Call</a></p>
+                        <p><a href="http://www.theoptionsguide.com/put-backspread.aspx">Put Backspread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/index-short-call.aspx">Selling Index Calls</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/naked-options">Tasty Trade Short Naked Call</a></p>
+                        <p><a href="http://www.theoptionsguide.com/synthetic-long-put.aspx">Synthetic Long Put</a></p>
+                        <p><a href="http://www.theoptionsguide.com/synthetic-short-call.aspx">Synthetic Short Call</a></p>
+                        <p><a href="http://www.theoptionsguide.com/synthetic-short-stock.aspx">Synthetic Short Stock</a></p>
+                        <p><a href="http://www.theoptionsguide.com/synthetic-short-stock-split-strikes.aspx">Synthethc Short Stock with Split Strikes</a></p>
+                    </div>
+                </div>
+                <div class="ui-block-a">
+                    <div class="jqm-block-content">
+                        <h3>Neutral -- Bearish on Volatility</h3>
+                        <p><a href="http://www.theoptionsguide.com/butterfly-spread.aspx">Long Butterfly</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/big-boy-iron-condor">Tasty Trade Big Boy Iron Condor</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/big-dawg-butterfly">Tasty Trade Big Dog Butterfly</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/broken-wing-butterfly">Tasty Trade Broken Wing Butterfly</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/butterfly-spread">Tasty Trade Butterfly Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/calendar-straddle.aspx">Calendar Straddle</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/calendar-spread">Tasty Trade Calendar Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/condor.aspx">The Condor</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/chicken-iron-condor">Tasty Trade Chicken Iron Condor</a></p>
+                        <p><a href="http://www.theoptionsguide.com/iron-butterfly.aspx">Iron Butterfly</a></p>
+                        <p><a href="http://www.theoptionsguide.com/iron-condor.aspx">Iron Condor</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/iron-condor">Tasty Trade Iron Condor</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/skewed-iron-condor">Tasty Trade Skewed Iron Condor</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/iron-fly">Tasty Trade Iron Fly</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-call-ladder.aspx">Long Call Ladder</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-put-butterfly.aspx">Long Put Butterfly</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-put-ladder.aspx">Long Put Ladder</a></p>
+                        <p><a href="http://www.theoptionsguide.com/neutral-calendar-spread.aspx">Neutral Calendar Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/put-ratio-spread.aspx">Put Ratio Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/ratio-call-write.aspx">Ratio Call Write</a></p>
+                        <p><a href="http://www.theoptionsguide.com/ratio-put-write.aspx">Ratio Put Write</a></p>
+                        <p><a href="http://www.theoptionsguide.com/ratio-spread.aspx">Ratio Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-call-synthetic-straddle.aspx">Short Call Synthetic Straddle</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-guts.aspx">Short Guts</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-put-synthetic-straddle.aspx">Short Put Synthetic Straddle</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-straddle.aspx">Short Straddle -- Sell Straddle</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/straddle">Tasty Trade Short Straddle</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-strangle.aspx">Short Strangle -- Sell Strangle</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/strangle">Tasty Trade Short Strangle</a></p>
+                        <p><a href="http://www.theoptionsguide.com/variable-ratio-write.aspx">Variable Ratio Write</a></p>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="jqm-block-content">
+                        <h3>Neutral -- Bullish on Volatility</h3>
+                        <p><a href="http://www.theoptionsguide.com/long-call-synthetic-straddle.aspx">Long Call Synthetic Straddle</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-guts.aspx">Long Guts</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-put-synthetic-straddle.aspx">Long Put Synthetic Straddle</a></p>
+                        <p><a href="https://www.tastytrade.com/tt/learn/diagonal-spread">Tasty Trade Long Put Diagonal Spread</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-straddle.aspx">Option Straddle -- Long Straddle</a></p>
+                        <p><a href="http://www.theoptionsguide.com/long-strangle.aspx">Option Strangle -- Long Strangle</a></p>
+                        <p><a href="http://www.theoptionsguide.com/reverse-iron-butterfly.aspx">Reverse Iron Butterfly</a></p>
+                        <p><a href="http://www.theoptionsguide.com/reverse-iron-condor.aspx">Reverse Iron Condor</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-butterfly.aspx">Short Butterfly</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-call-ladder.aspx">Short Call Calendar</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-condor.aspx">Short Condor</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-put-butterfly.aspx">Short Put Butterfly</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-put-ladder.aspx">Short Put Ladder</a></p>
+                        <p><a href="http://www.theoptionsguide.com/strap.aspx">Strap</a></p>
+                        <p><a href="http://www.theoptionsguide.com/strip.aspx">Strip</a></p>
+                    </div>
+                </div>
+                <div class="ui-block-a">
+                    <div class="jqm-block-content">
+                        <h3>Arbitrage</h3>
+                        <p><a href="http://www.theoptionsguide.com/box-spread.aspx">Box Spread -- Long Box</a></p>
+                        <p><a href="http://www.theoptionsguide.com/conversion.aspx">Conversion</a></p>
+                        <p><a href="http://www.theoptionsguide.com/reversal.aspx">Reversal</a></p>
+                        <p><a href="http://www.theoptionsguide.com/short-box.aspx">Short Box</a></p>
+                        <p><a href="http://www.theoptionsguide.com/dividend-arbitrage.aspx">Dividend Arbitrage</a></p>
+                        <p><a href="http://www.theoptionsguide.com/dividend-capture-using-covered-calls.aspx">Dividend Capture Using Covered Calls</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+
+        <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+            <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+                <li data-filtertext="demos homepage" data-icon="home"><a href="#intro">Home / Introduction</a></li>
+                <li data-filtertext="introduction overview getting started"><a href="#option_strategy" data-ajax="false">Options Strategies Overview</a></li>
+                <li data-filtertext="share ideas chat"><a href="#share_ideas_chat">Share Ideas / Chat</a></li>
+                <li data-filtertext="investment ideas portfolio"><a href="#portfolio">Las Vegas Team Investment Ideas</a></li>
+                <li data-filtertext="submit a trade"><a href="#submit_a_trade" data-ajax="false">Propose a trade!</a></li>
+                <li data-filtertext="contact us"><a href="#" data-ajax="false">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- /panel -->
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+            <p>Las Vegas Meetup -- Advanced Options and Hedging</p>
+        </div>
+        <!-- /footer -->
+
+    </div>
+    <!-- /page -->
+    <div data-role="page" id="portfolio" class="jqm-demos jqm-home">
+        <div data-role="header" class="jqm-header">
+            <h2><a href="./" title="Las Vegas Adv. Options home" class="ui-link">
+                            <div style=" font-size: 2vh; color: white; background: dodgerblue; padding: 2px 10px; ">
+                                Advanced Options and Hedging Strategy <br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Las Vegas &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            </div>
+                        </a>
+                    </h2>
+            <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content jqm-content">
+
+            <h2>Team Portfolio</h2>
+            <div id="portfolio_content"></div>
+
+            <script src='https://spreadsheets.google.com/feeds/list/17DqeWJ-xnfzf7kTxcQjfPS25RdKHXEbQUJte8IuP0Hs/od6/public/full?alt=json-in-script&callback=useJSONdata'></script>
+
+        </div>
+        <!-- /content -->
+
+        <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+            <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+                <li data-filtertext="demos homepage" data-icon="home"><a href="#intro">Home / Introduction</a></li>
+                <li data-filtertext="introduction overview getting started"><a href="#option_strategy" data-ajax="false">Options Strategies Overview</a></li>
+                <li data-filtertext="share ideas chat"><a href="#share_ideas_chat">Share Ideas / Chat</a></li>
+                <li data-filtertext="investment ideas portfolio"><a href="#portfolio">Las Vegas Team Investment Ideas</a></li>
+                <li data-filtertext="submit a trade"><a href="#submit_a_trade" data-ajax="false">Propose a trade!</a></li>
+                <li data-filtertext="contact us"><a href="#" data-ajax="false">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- /panel -->
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+            <p>Las Vegas Meetup -- Advanced Options and Hedging</p>
+        </div>
+        <!-- /footer -->
+
+    </div>
+    <!-- /page -->
+
+</body>
