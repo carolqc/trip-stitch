@@ -20,3 +20,6 @@ blaze-html-templates
 brettle:accounts-deluxe
 kadira:flow-router
 kadira:blaze-layout
+autopublish
+insecure
+comerc:template2
