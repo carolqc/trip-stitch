@@ -28,6 +28,19 @@
     /*custom CSS*/
         /* Swipe works with mouse as well but often causes text selection. */
         /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+        /*https://stackoverflow.com/questions/18612651/how-to-use-responsive-background-image-in-css3-in-bootstrap*/
+
+        html {
+            background: url(images/cityview.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        div.panel-spacer{
+            border: 0;
+        }
 
         .navbar-custom {
             background-color: #2D306E;
@@ -36,7 +49,6 @@
             font-size: 20px;
             font-weight: bold;
         }
-
         /*https://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3*/
 
         .navbar-custom .navbar-nav>li>a {
@@ -44,7 +56,7 @@
             /*font-size: 24px;*/
         }
 
-        .navbar-custom a.navbar-brand{
+        .navbar-custom a.navbar-brand {
             font-size: 36px;
         }
 

@@ -68,40 +68,113 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
+<!--
         <div role="main" class="ui-content jqm-content">
 
-            <!-- <h1>Trip Stitch:  Planning for multi-person travel.</h1>
+            <!- - <h1>Trip Stitch:  Planning for multi-person travel.</h1>
 
             <p><strong>This website / app was created to manage your trips with multiple travelers, all coming from different locations.</strong></p>
-            <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas"> -->
+            <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas"> - ->
 
-            <h2>First Step</h2>
-            <form>
-                <!-- <input type="button" data-inline="true" value="Input"> -->
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    Round Trip
-                    <input type="button" data-enhanced="true" value="Round Trip">
-                </div>
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    One Way
-                    <input type="button" data-enhanced="true" value="One Way">
-                </div>
 
-                <p>Pick Your Destination:
-                <input type="text" name="destination"></p>
-                Choose Your dates
-                <p>Depart: <input type="text" id="datepicker_start"></p>
-                <p>Return: <input type="text" id="datepicker_end"></p>
+        </div> -->
 
-                <p>Organizer Name:
-                <input type="text" name="organizer_name"></p>
-                <p>Organizer Email Address:
-                <input type="text" name="organizer_email"></p>
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    Submit
-                    <input type="submit" data-enhanced="true" value="Round Trip">
-                </div>
-            </form>
+        <div class="panel panel-default col-sm-1 panel-spacer"></div>
+
+        <div class="panel panel-default col-sm-4">
+          <div class="panel-body">
+              <h2>First Step</h2>
+              <form class="form-horizontal" >
+                  <!-- <input type="button" data-inline="true" value="Input"> -->
+                <p><div class="form-group">
+                    <label class="col-sm-1"></label>
+                    <label class="radio-inline"><input type="radio" name="trip" value="RoundTrip">Round Trip</label>
+                    <label class="radio-inline"><input type="radio" name="trip" value="OneWay">One Way</label>
+                </div></p>
+                <p></p>
+                <p>
+                    <div class="panel panel-default col-sm-2 panel-spacer"></div>
+                    <iframe src="http://www.webflyer.com/travel/milemarker/lookup.shtml"></iframe>
+                </p>
+                <p></p>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="destination">Destination:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="destination" placeholder="Airport Code">
+                      </div>
+                  </div>
+
+
+
+
+                  Choose Your dates
+                  <p>Depart: <input type="text" id="datepicker_start"></p>
+                  <p>Return: <input type="text" id="datepicker_end"></p>
+
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="organizer_name">Name:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="organizer_name" placeholder="Trip Coordinator Name">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="email">Email:</label>
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control" id="organizer_email" placeholder="Enter Coordinator Email Address">
+                      </div>
+                  </div>
+
+
+
+
+                  <!-- <p>Organizer Email Address:
+                  <input type="text" name="organizer_email"></p> -->
+                  <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                      <input type="submit" data-enhanced="true" value="Submit">
+                  </div>
+              </form>
+          </div>
         </div>
+
+<div class="panel panel-default col-sm-1"></div>
+
+<div class="panel panel-default col-sm-1"></div>
+
+<div class="panel panel-default col-sm-4">
+  <div class="panel-body">
+      <h2>First Step</h2>
+      <form>
+          <!-- <input type="button" data-inline="true" value="Input"> -->
+          <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
+              Round Trip
+              <input type="button" data-enhanced="true" value="Round Trip">
+          </div>
+          <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
+              One Way
+              <input type="button" data-enhanced="true" value="One Way">
+          </div>
+
+          <p>Pick Your Destination:
+          <input type="text" name="destination"></p>
+          Choose Your dates
+          <p>Depart: <input type="text" id="datepicker_start"></p>
+          <p>Return: <input type="text" id="datepicker_end"></p>
+
+          <p>Organizer Name:
+          <input type="text" name="organizer_name"></p>
+          <p>Organizer Email Address:
+          <input type="text" name="organizer_email"></p>
+          <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
+              Submit
+              <input type="submit" data-enhanced="true" value="Round Trip">
+          </div>
+      </form>
+  </div>
+</div>
+
 
 </template>
