@@ -52,7 +52,8 @@ Template.main_content.events({
             })
 
             template.current_trip_id.set(trip_id)
-
+            
+            // Clear off the form for next entry
             trip_type.val('')
             destination.val('')
             datepicker_start.val('')
