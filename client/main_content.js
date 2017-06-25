@@ -14,5 +14,15 @@ Template.main_content.events({
         })
 
         FlowRouter.go(`/trips/${trip_id}`)
+    },
+
+    'click #AddTravelerButton': function (event) {
+        event.preventDefault();
+        console.log("You pressed the add Traveler button");
+        travelers.insert({
+            name: "Fake Player",
+            score: 1000,
+            unwantedData: "Hello!"
+        })
     }
 })
