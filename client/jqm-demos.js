@@ -1,4 +1,5 @@
 import {Template} from "meteor/templating"
+
 Template.main2.onRendered(function() {
     // Handler for .ready() called.
     console.log("jqm-demos.js called");
