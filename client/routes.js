@@ -33,3 +33,9 @@ FlowRouter.route('/my_trips/', {
         BlazeLayout.render('my_trips')
     }
 })
+FlowRouter.route('/results/', {
+    name: "Results",
+    action() {
+        BlazeLayout.render('results')
+    }
+})
