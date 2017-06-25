@@ -21,6 +21,7 @@
     "eslint-plugin-import": "^2.6.0",
     "lodash": "^4.17.4",
     "meteor-node-stubs": "~0.2.4",
+    "meteor-node-stubs": "~0.2.4",
     "sabre-dev-studio": "^1.2.0"
   }
 }
