@@ -3,16 +3,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trip Stitch</title>
 
+    <link rel="stylesheet" href="/css/jqm-demos.css"/>
     <!-- jQuery CDN Content 25 April 2016 -->
-    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <link rel="stylesheet" href="/css/jqm-demos.css"/>
 
     <style type="text/css">
     /*custom CSS*/
@@ -184,63 +184,5 @@
 </head>
 
 <body>
-    <div data-role="page" id="intro" class="jqm-demos jqm-home">
-        <div data-role="header" class="jqm-header">
-            <h2><a href="./" title="Trip-Stitch" class="ui-link">
-                    <div style=" font-size: 2vh; color: white; background: dodgerblue; padding: 2px 10px; ">
-                        Trip-Stitch <br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    </div>
-                </a>
-            </h2>
-            <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
-        </div>
-        <!-- /header -->
-
-        <div role="main" class="ui-content jqm-content">
-
-            <h1>Trip Stitch:  Planning for multi-person travel.</h1>
-
-            <p><strong>This website / app was created to manage your trips with multiple travelers, all coming from different locations.
-            <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas">
-
-            <h2>First Step</h2>
-            <form>
-                <!-- <input type="button" data-inline="true" value="Input"> -->
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    Round Trip
-                    <input type="button" data-enhanced="true" value="Round Trip">
-                </div>
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    One Way
-                    <input type="button" data-enhanced="true" value="One Way">
-                </div>
-
-                <p>Pick Your Destination:
-                <input type="text" name="destination"></p>
-                Choose Your dates
-                <p>Depart: <input type="text" id="datepicker_start"></p>
-                <p>Return: <input type="text" id="datepicker_end"></p>
-                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-                    Submit
-                    <input type="button" data-enhanced="true" value="Round Trip">
-                </div>
-            </form>
-        </div>
-        <!-- end of main -->
-        <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
-            <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-                <li data-filtertext="home create a trip" data-icon="home"><a href="#intro" data-ajax="false">Home / Create A Trip</a></li>
-                <!-- <li data-filtertext="invitee responses"><a href="#share_ideas_chat">Invitee Page</a></li> -->
-                <li data-filtertext="trip search results"><a href="#portfolio">Trip Search Results</a></li>
-                <li data-filtertext="book your trip"><a href="#submit_a_trade" data-ajax="false">Book It!</a></li>
-            </ul>
-        </div>
-        <!-- /panel -->
-        <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
-            <p>Trip Stitch: Coordinate your group travel plans.</p>
-        </div>
-        <!-- /footer -->
-    </div>
-    <!-- /page -->
-
+    {{>main2}}
 </body>
