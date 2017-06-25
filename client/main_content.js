@@ -66,7 +66,7 @@ Template.main_content.events({
                         console.error('failed to calculate trips', error)
                     }
                     else {
-                       
+
                         // template.current_trip_id.set(response.trip_id)
                     }
                 })
@@ -78,6 +78,8 @@ Template.main_content.events({
             datepicker_end.val('')
             organizer_name.val('')
             organizer_email.val('')
+
+            FlowRouter.go('/results/');
         }
 
         ,
