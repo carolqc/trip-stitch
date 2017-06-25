@@ -23,3 +23,5 @@ kadira:blaze-layout
 autopublish
 insecure
 comerc:template2
+twbs:bootstrap                      # use bootstrap datepicker
+tsega:bootstrap3-datetimepicker     # use bootstrap datepicker
