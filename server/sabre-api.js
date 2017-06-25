@@ -19,5 +19,5 @@ const logger_callback = function(error, data) {
    }
 }
 
-flight_api.travel_theme_lookup(logger_callback)
-flight_api.airports_at_cities_lookup({ city: 'NYC' }, logger_callback)
+// flight_api.travel_theme_lookup(logger_callback)
+// flight_api.airports_at_cities_lookup({ city: 'NYC' }, logger_callback)

@@ -1,0 +1,14 @@
+<template name="trip_results">
+    {{#with trip_data}}
+        <h1>Destination: {{destination_airport_code}}</h1>
+        <ul>
+            {{#each person in participants}}
+                <li>{{person}}</li>
+            {{/each}}
+        </ul>
+    {{/with}}
+</template>
+
+<template name="trip_participant">
+
+</template>
