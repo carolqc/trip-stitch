@@ -1,0 +1,151 @@
+<template name="main_content">
+    <nav class="navbar navbar-custom">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header"> <!-- Hamburger Icon -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Trip Stitch</a>
+        </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- http://getbootstrap.com/components/#navbar -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign In</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Trips<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">My Trips</a></li>
+            <li><a href="#">View, Print, Email Itinerary</a></li>
+            <li><a href="#">Find My Trip</a></li>
+            <!-- <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li> -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Find Your Request Number</a></li>
+            <li><a href="#">Profile / Password Help</a></li>
+            <li><a href="#">Contact Us / About Us</a></li>
+            <!-- <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!--
+        <div role="main" class="ui-content jqm-content">
+            <!- - <h1>Trip Stitch:  Planning for multi-person travel.</h1>
+            <p><strong>This website / app was created to manage your trips with multiple travelers, all coming from different locations.</strong></p>
+            <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas"> - ->
+        </div> -->
+
+        <div class="panel panel-default col-sm-1 panel-spacer"></div>
+
+        <div class="panel panel-default col-sm-4">
+          <div class="panel-body">
+              <h2>First Step</h2>
+
+              <form class="form-horizontal" id="firstForm">
+                  <!-- <input type="button" data-inline="true" value="Input"> -->
+                <p><div class="form-group" id="tripType">
+                    <label class="col-sm-1"></label>
+                    <label class="radio-inline"><input type="radio" name="trip" value="RoundTrip">Round Trip</label>
+                    <label class="radio-inline"><input type="radio" name="trip" value="OneWay">One Way</label>
+                </div></p>
+                <p></p>
+                <p>
+                    <div class="panel panel-default col-sm-2 panel-spacer"></div>
+                    <iframe src="http://www.webflyer.com/travel/milemarker/lookup.shtml"></iframe>
+                </p>
+                <p></p>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="destination">Destination:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="destination" placeholder="Airport Code">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="datepicker_start">Depart Date:</label>
+                      <div class="col-sm-9">
+                          <div class="input-group datetimepicker">
+                               <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                               <input name="datepicker_start" id="datepicker_start" class="set-due-date form-control" type="text" placeholder="Depart Date:"/>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="datepicker_end">Return Date:</label>
+                      <div class="col-sm-9">
+                          <div class="input-group datetimepicker">
+                               <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                               <input name="datepicker_end" id="datepicker_end" class="set-due-date form-control" type="text" placeholder="Return Date:"/>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="organizer_name">Name:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="organizer_name" placeholder="Trip Coordinator Name">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="email">Email:</label>
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control" id="organizer_email" placeholder="Enter Coordinator Email Address">
+                      </div>
+                  </div>
+
+              </form>
+          </div>
+        </div>
+
+<div class="panel panel-default col-sm-1 panel-spacer"></div>
+
+<div class="panel panel-default col-sm-5">
+  <div class="panel-body">
+      <h2>Second Step</h2>
+                <form>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="tripTitle">Trip Title:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="tripTitle" placeholder="Name / Description of Trip">
+                        </div>
+                    </div><br><br>
+
+                    <input type="button" value="AddTraveler" class="AddTravelerButton" ><br><br>
+                    <input type="text" name="travelerName" id="travelerName" placeholder="Traveler Name">
+                    <input type="text" name="travelerAirPort" id="travelerAirPort" placeholder="Traveler Departure Airport Code">
+                    <input type="text" name="travelerEmail" id="travelerEmail" placeholder="Traveler Email Address">
+                    <input type="text" name="travelerPhone" id="travelerPhone" placeholder="Traveler Phone Number"><br><br>
+                </form>
+                <!-- {{> add_traveler}} -->
+                <div id="travelers">
+                    John Smith, jsmith@email.com, 123-456-7890, LAX<br>
+                    Bill Jones, bjones256@gmail.com, 123-727-6565, DFW<br>
+                    Sue Baker, sbaker777777@a.com, 888-999-7765, IAD<br>
+                    Jackie Jacobs, jj@nailmail.com, 345-555-1254, ORD
+                </div>
+<br><br>
+                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
+                    <input type="submit" id="finishButton" data-enhanced="true" value="Submit">
+                </div>
+  </div>
+</div>
+
+
+</template>
