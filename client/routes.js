@@ -14,3 +14,10 @@ FlowRouter.route('/trips/:trip_id', {
         BlazeLayout.render('trip_results', {trip_id: params.trip_id})
     }
 })
+
+FlowRouter.route('/about_us/', {
+    name: "About Us",
+    action() {
+        BlazeLayout.render('about_us')
+    }
+})
