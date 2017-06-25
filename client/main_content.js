@@ -1,3 +1,4 @@
+import {Trips} from '../collections'
 
 // https://stackoverflow.com/questions/28885479/meteor-js-add-a-date-picker-to-a-page
 // $('.datetimepicker').datetimepicker();
@@ -30,7 +31,17 @@ Template.main_content.events( {
 
 // how do I send data to server, via function call arguments?
 
-        Meteor.call('create-a-trip');
+            const trip_id = Trips.insert({
+                trip_type: TripType,
+                destination: destination,
+                start_date: datepicker_start,
+                end_date: datepicker_end,
+                organizer_name: organizer_name,
+                organizer_email: organizer_email,
+                trip_title: trip_title
+            })
+
+            FlowRouter.go(`/trips/${trip_id}`)
     },
 
     // https://stackoverflow.com/questions/24869542/calling-javascript-function-on-button-click-meteor
