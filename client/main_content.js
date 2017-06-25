@@ -9,5 +9,15 @@ Template.main_content.events( {
         var organizer_name = event.target.organizer_name.value;
         console.log(destination);
         Meteor.call('create-a-trip');
+    },
+
+    'click #AddTravelerButton': function(event){
+      event.preventDefault();
+      console.log("You pressed the add Traveler button");
+      travelers.insert({
+            name: "Fake Player",
+            score: 1000,
+            unwantedData: "Hello!"
+        });
     }
-})
+  })
