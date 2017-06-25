@@ -1,7 +1,5 @@
 <template name="main_content">
-    <!-- <div class="jumbotron text-center">
-        <h1>Trip Stitch:  Planning for multi-person travel</h1>
-    </div> -->
+
     <nav class="navbar navbar-custom">
         <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,28 +16,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <!-- http://getbootstrap.com/components/#navbar -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <!-- <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul> -->
-      <!-- <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form> -->
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Sign In</a></li>
         <li class="dropdown">
@@ -71,13 +47,9 @@
 
 <!--
         <div role="main" class="ui-content jqm-content">
-
             <!- - <h1>Trip Stitch:  Planning for multi-person travel.</h1>
-
             <p><strong>This website / app was created to manage your trips with multiple travelers, all coming from different locations.</strong></p>
             <img style="width: 85%; margin: 4vh auto; " src="/images/las_vegas.jpg" alt="Welcome to Las Vegas"> - ->
-
-
         </div> -->
 
         <div class="panel panel-default col-sm-1 panel-spacer"></div>
@@ -106,13 +78,19 @@
                       </div>
                   </div>
 
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="datepicker_start">Depart Date:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="datepicker_start" placeholder="Depart Date:">
+                      </div>
+                  </div>
 
-
-
-                  Choose Your dates
-                  <p>Depart: <input type="text" id="datepicker_start"></p>
-                  <p>Return: <input type="text" id="datepicker_end"></p>
-
+                  <div class="form-group">
+                      <label class="control-label col-sm-3" for="datepicker_end">Return Date:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="datepicker_end" placeholder="Return Date:">
+                      </div>
+                  </div>
 
                   <div class="form-group">
                       <label class="control-label col-sm-3" for="organizer_name">Name:</label>
@@ -128,9 +106,6 @@
                       </div>
                   </div>
 
-
-
-
                   <!-- <p>Organizer Email Address:
                   <input type="text" name="organizer_email"></p> -->
                   <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
@@ -140,39 +115,25 @@
           </div>
         </div>
 
-<div class="panel panel-default col-sm-1"></div>
+<div class="panel panel-default col-sm-1 panel-spacer"></div>
 
-<div class="panel panel-default col-sm-1"></div>
-
-<div class="panel panel-default col-sm-4">
+<div class="panel panel-default col-sm-5">
   <div class="panel-body">
-      <h2>First Step</h2>
-      <form>
-          <!-- <input type="button" data-inline="true" value="Input"> -->
-          <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-              Round Trip
-              <input type="button" data-enhanced="true" value="Round Trip">
-          </div>
-          <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-              One Way
-              <input type="button" data-enhanced="true" value="One Way">
-          </div>
-
-          <p>Pick Your Destination:
-          <input type="text" name="destination"></p>
-          Choose Your dates
-          <p>Depart: <input type="text" id="datepicker_start"></p>
-          <p>Return: <input type="text" id="datepicker_end"></p>
-
-          <p>Organizer Name:
-          <input type="text" name="organizer_name"></p>
-          <p>Organizer Email Address:
-          <input type="text" name="organizer_email"></p>
-          <div class="ui-input-btn ui-btn ui-corner-all ui-shadow ui-btn-inline">
-              Submit
-              <input type="submit" data-enhanced="true" value="Round Trip">
-          </div>
-      </form>
+      <h2>Second Step</h2>
+                <form>
+                    <input type="text" name="travelerName" placeholder="Traveler Name">
+                    <input type="text" name="travelerAirPort" placeholder="Traveler Departure Airport Code">
+                    <input type="text" name="travelerEmail" placeholder="Traveler Email Address">
+                    <input type="text" name="travelerPhone" placeholder="Traveler Phone Number">
+                    <input type="submit" value="AddTraveler" id="AddTravelerButton" >
+                </form>
+                <!-- {{> add_traveler}} -->
+                <div id="travelers">
+                    John Smith, jsmith@email.com, 123-456-7890, LAX<br>
+                    Bill Jones, bjones256@gmail.com, 123-727-6565, DFW<br>
+                    Sue Baker, sbaker777777@a.com, 888-999-7765, IAD<br>
+                    Jackie Jacobs, jj@nailmail.com, 345-555-1254, ORD
+                </div>
   </div>
 </div>
 
