@@ -1,0 +1,2 @@
+import {Trips} from '../collections'
+
