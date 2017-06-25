@@ -52,7 +52,7 @@ Template.main_content.events({
             })
 
             template.current_trip_id.set(trip_id)
-            
+
             // Clear off the form for next entry
             trip_type.val('')
             destination.val('')
@@ -60,6 +60,8 @@ Template.main_content.events({
             datepicker_end.val('')
             organizer_name.val('')
             organizer_email.val('')
+
+            FlowRouter.go('/results/');
         }
 
         ,
