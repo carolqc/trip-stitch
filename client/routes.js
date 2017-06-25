@@ -11,7 +11,7 @@ FlowRouter.route('/', {
 FlowRouter.route('/trips/:trip_id', {
     name: 'Trips',
     action(params) {
-        BlazeLayout.render('trip_results', {trip_id: params.trip_id})
+        BlazeLayout.render('manage_trip', {trip_id: params.trip_id})
     }
 })
 
