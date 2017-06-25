@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "meteor-node-stubs": "~0.2.4",
+    "meteor-node-stubs": "^0.2.11",
     "sabre-dev-studio": "^1.2.0",
     "twilio": "^3.4.0"
   },

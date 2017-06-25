@@ -21,3 +21,15 @@ FlowRouter.route('/about_us/', {
         BlazeLayout.render('about_us')
     }
 })
+FlowRouter.route('/sign_in/', {
+    name: "Sign In",
+    action() {
+        BlazeLayout.render('sign_in')
+    }
+})
+FlowRouter.route('/my_trips/', {
+    name: "My Trips",
+    action() {
+        BlazeLayout.render('my_trips')
+    }
+})
