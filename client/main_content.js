@@ -1,11 +1,10 @@
 import {Trips} from '../collections'
-import {Template} from 'meteor/templating'
 
 Template.main_content.events({
     'submit form[name=create-trip]': function (event) {
         event.preventDefault()
 
-        Trips.insert({
+        const trip_id = Trips.insert({
             destination_airport_code: event.target.destination.value,
             start_date: event.target.datepicker_start.value,
             end_date: event.target.datepicker_end.value,
@@ -13,5 +12,7 @@ Template.main_content.events({
             organizer_email: event.target.organizer_email.value,
             participants: []
         })
+
+        FlowRouter.go(`/trips/${trip_id}`)
     }
 })

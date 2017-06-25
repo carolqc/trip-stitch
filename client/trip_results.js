@@ -3,8 +3,8 @@ import _ from 'lodash/fp'
 
 Template2('trip_results', {
     helpers: {
-        participants() {
+        trip_data() {
             return Trips.findOne(this.data.trip_id())
-        },
+        }
     }
 })
