@@ -1,27 +1,26 @@
 {
-  "name": "trip-stitch",
-  "private": true,
+  "name": "vendor",
+  "version": "1.0.0",
   "scripts": {
-    "start": "meteor run"
+    "server": "babel-node server/index"
   },
   "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "meteor-node-stubs": "~0.2.4",
-    "sabre-dev-studio": "^1.2.0",
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "twilio": "^3.4.0"
   },
   "devDependencies": {
+    "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
+    "babel-polyfill": "^6.9.0",
     "babel-preset-env": "^1.5.2",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.0",
-    "lodash": "^4.17.4",
-    "meteor-node-stubs": "~0.2.4",
-    "meteor-node-stubs": "~0.2.4",
-    "sabre-dev-studio": "^1.2.0"
+    "mocha": "^3.4.2",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "unexpected": "^10.29.0"
   }
 }

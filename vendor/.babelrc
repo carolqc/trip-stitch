@@ -1,0 +1,7 @@
+{
+    "presets":["stage-0", ["env", {
+      "targets": {
+        "browser": "last 2 versions, >1%"
+      }
+    }]]
+}
