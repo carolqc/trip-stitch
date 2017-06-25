@@ -1,3 +1,5 @@
+.WebStorm2017*
+
 node_modules/
 
 # Created by https://www.gitignore.io/api/vim,macos,linux,windows,meteorjs,webstorm
