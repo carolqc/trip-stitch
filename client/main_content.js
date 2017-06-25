@@ -1,8 +1,10 @@
 
 // https://stackoverflow.com/questions/28885479/meteor-js-add-a-date-picker-to-a-page
 // $('.datetimepicker').datetimepicker();
-$("#datepicker_start").datetimepicker();
-$("#datepicker_end").datetimepicker();
+Meteor.startup(function() {
+    $("#datepicker_start").datetimepicker();
+    $("#datepicker_end").datetimepicker();
+})
 
 Template.main_content.events( {
 
