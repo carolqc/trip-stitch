@@ -38,7 +38,8 @@ Template.main_content.events( {
                 end_date: datepicker_end,
                 organizer_name: organizer_name,
                 organizer_email: organizer_email,
-                trip_title: trip_title
+                trip_title: trip_title,
+                travelers: []
             })
 
             FlowRouter.go(`/trips/${trip_id}`)
